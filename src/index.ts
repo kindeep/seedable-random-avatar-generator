@@ -5,6 +5,10 @@ import seedrandom from 'seedrandom';
  * @returns Random avatar image URL
  */
 export function generateRandomAvatar(seed?: string): string {
+  return "https://avataaars.io/?" + generateOptionsString(seed);
+}
+
+export function generateOptionsString(seed?: string): string {
   let topTypeOptions = new Array<string>();
   topTypeOptions.push(
     "NoHair",
@@ -203,7 +207,7 @@ export function generateRandomAvatar(seed?: string): string {
 
   const rng = seed ? seedrandom(seed) : seedrandom();
 
-  return `https://avataaars.io/?accessoriesType=${
+  return `accessoriesType=${
     accessoriesTypeOptions[
     Math.floor(rng() * accessoriesTypeOptions.length)
     ]
