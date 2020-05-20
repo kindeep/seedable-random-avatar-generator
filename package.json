@@ -1,6 +1,6 @@
 {
   "name": "seedable-random-avatar-generator",
-  "description": "A library to generate random avatars images URL using https://getavataaars.com",
+  "description": "A library to generate random avatars images URL using https://getavataaars.com, optionally based on a string seed.",
   "version": "1.1.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
