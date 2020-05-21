@@ -1,19 +1,33 @@
-# Avatar Generator
+# Random Avatar Generator
 
 - Generates random avatars from the website https://getavataaars.com/
 
 ## Usage
 
+### Simple 
+
 ```typescript
-import { AvatarGenerator } from 'random-avatar-generator';
+import { getRandomAvatar } from 'random-avatar-generator';
 
-const generator = new AvatarGenerator();
+// Returns get a url for a random avatar
+getRandomAvatar();
+```
 
-// Simply get a random avatar
-generator.generateRandomAvatar();
+### With a seed
 
-// Optionally specify a seed for the avatar. e.g. for always getting the same avatar for a user id.
-// With seed 'avatar', always returns https://avataaars.io/?accessoriesType=Kurt&avatarStyle=Circle&clotheColor=Blue01&clotheType=Hoodie&eyeType=EyeRoll&eyebrowType=RaisedExcitedNatural&facialHairColor=Blonde&facialHairType=BeardMagestic&hairColor=Black&hatColor=White&mouthType=Sad&skinColor=Yellow&topType=ShortHairShortWaved
-generator.generateRandomAvatar('avatar'); 
+For instance, if you want to generate a random avatar for a user id/email which stays the same each time.
+
+
+```typescript
+import { getRandomAvatar } from 'random-avatar-generator';
+
+getRandomAvatar('avatar'); 
 
 ```
+
+In the example above, specifying the seed `avatar` results in: -
+
+![avatar](https://avataaars.io/?accessoriesType=Kurt&avatarStyle=Circle&clotheColor=Blue01&clotheType=Hoodie&eyeType=EyeRoll&eyebrowType=RaisedExcitedNatural&facialHairColor=Blonde&facialHairType=BeardMagestic&hairColor=Black&hatColor=White&mouthType=Sad&skinColor=Yellow&topType=ShortHairShortWaved "Avatar with seed 'avatar'")
+
+
+`https://avataaars.io/?accessoriesType=Kurt&avatarStyle=Circle&clotheColor=Blue01&clotheType=Hoodie&eyeType=EyeRoll&eyebrowType=RaisedExcitedNatural&facialHairColor=Blonde&facialHairType=BeardMagestic&hairColor=Black&hatColor=White&mouthType=Sad&skinColor=Yellow&topType=ShortHairShortWaved`
